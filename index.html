@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Brandon Burns, Adam Cowher, Jake O'Leary, Andrew Veteto - CSS Accessibility</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="enabler.js" defer></script>
+
+    <style>
+        .carousel-item img {
+            width: 425px;
+            height: 225px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #0B5FA4;">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: white">
+        <div class="container">
+            <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#reflectionsModal"><img src="logo.jpg"
+                    alt="Website Logo" style="width: 50px; height: 50px; border-radius: 25px" /></a>
+            <div class="modal fade" id="reflectionsModal" tabindex="-1" aria-labelled-by="reflectionsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="reflectionsModalLabel">Welcome!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Learn more about having accessible websites!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                style="background-color: #b8b8b8;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" aria-label="Enter search query here"
+                        placeholder="Search" />
+                    <button class="btn" type="submit" id="look_for" style="background-color: #b8b8b8;">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h1 style="text-align:center; color: white;">Web Accessibility</h1>
+    <div class="container-fluid">
+        <div class="col m-5">
+            <div class="row m-5">
+                <div class="col col-sm-12 col-md-8 col-lg-3 carousel-area">
+                    <h3 style="color: white; text-align: center;">What are the main 5 steps of the Web Content
+                        Accessibility Guidelines Evaluation Methodology?</h3>
+                    <br>
+                    <div id="course_carousel" class="carousel carousel-light" data-bs-ride="carousel"
+                        data-bs-interval="2000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="4"></button>
+                        </div>
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="step1.jpg" alt="Step 1: Define the evaluation scope" />
+                                <div class="carousel-caption">
+                                    <h2
+                                        style="background-color: rgba(184, 184, 184, 0.3); border-radius: 3px; color: black;">
+                                        Step 1</h2>
+                                    <p style="background-color: rgba(184, 184, 184, 0.6); color: black;">Define the
+                                        evaluation scope</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="step2.jpg" alt="Step 2: Explore the target website" />
+                                <div class="carousel-caption">
+                                    <h2 style="color: black; background-color: rgba(184, 184, 184, 0.6);">Step 2</h2>
+                                    <p style="color: black; background-color: rgba(184, 184, 184, 0.6)">Explore the target website</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="step3.jpg"
+                                    alt="Step 3: Select a representative sample" />
+                                <div class="carousel-caption">
+                                    <h2 style="color: black; background-color: rgba(184, 184, 184, 0.6)">Step 3</h2>
+                                    <p style="color: black; background-color: rgba(184, 184, 184, 0.6)">Select a representative sample</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="step4.jpg" alt="Step 4: Audit the selected sample" />
+                                <div class="carousel-caption">
+                                    <h2 style="color: black; background-color: rgba(184, 184, 184, 0.6)">Step 4</h2>
+                                    <p style="color: black; background-color: rgba(184, 184, 184, 0.6)">Audit the selected sample</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="step5.jpg" alt="Step 5: Report the findings" />
+                                <div class="carousel-caption">
+                                    <h2 style="color: black; background-color: rgba(184, 184, 184, 0.6)">Step 5</h2>
+                                    <p style="color: black; background-color: rgba(184, 184, 184, 0.6)">Report the findings</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#course_carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col row-col-sm-1 accordion-area">
+                    <h3 style="color: white; padding-top: 40px;">The 4 Tenets of Web Accessibility</h3>
+                    <div class="accordion" id="accordionRecipes">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <b>P</b>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="Backstage News On Santana's Current AEW Status"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    <b>P</b>erceivable by at least one sense
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <b>O</b>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="Matches Announced For 4/12 AEW Dynamite, Including Orange Cassidy Title Defense"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    <b>O</b>perable, using keyboard, mouse, voice...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <b>U</b>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="Swerve Strickland Announces Himself As Nick Wayne's Inaugural AEW Opponent"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    <b>U</b>nderstandable, it should make sense to the users
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    <b>R</b>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="Saraya Discusses Process Of Learning And Second-Guessing Upon Her Return To Wrestling In AEW"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    <b>R</b>obust, content should use web standards compatible with different browsers,
+                                    currently and in the foreseeable future
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">The W-A-I Initiative</div>
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">W-A-I (Web Accessibility Initiative)</div>
+                        <button class="btn btn-md d-block" style="background-color: #b8b8b8; margin-top: 50px" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right"
+                            title="What is the Web Accessibility Initiative?"
+                            data-bs-content="The World Wide Web Consortium (W3C)'s Web Accessibility Initiative (WAI) is an effort to improve the accessibility of the World Wide Web (WWW or Web) for people with disabilities. People with disabilities may encounter difficulties when using computers generally, but also on the Web. Since people with disabilities often require non-standard devices and browsers, making websites more accessible also benefits a wide range of user agents and devices, including mobile devices, which have limited resources.">
+                            <span style="margin-left: 10px; margin-top: 20px; font-size: large;">Click here to learn more...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">Semantic Tags</div>
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">Why are they important?</div>
+                        <button class="btn btn-md d-block" style="background-color: #b8b8b8; margin-top: 50px;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="What are semantic tags?"
+                            data-bs-content="Semantic HTML tags help search engines and other user devices determine the importance and context of web pages. The pages made with semantic elements are much easier to read. Semantic tags provide greater accessibility and offer a better user experience.">
+                            <span style="margin-left: 10px; margin-top: 20px; font-size: large;">Click here to find out...</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col mt-3">
+                    <p style="background-color: white; text-align: center; height: 275px; font-size: x-large; padding: 25px; border-radius: 3px; overflow: auto;">Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
+
+                        It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.</p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
